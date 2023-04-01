@@ -1,0 +1,18 @@
+.activitycard-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 50px 30px;
+    align-items: center;
+}
+.cardimage{
+    min-width: 300px;
+    padding: 20px 40px;
+}
+
+@media only screen and (max-width: 950px) {
+    .activitycard-container{
+      flex-wrap: wrap;
+    }
+  }

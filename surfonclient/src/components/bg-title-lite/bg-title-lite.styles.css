@@ -1,0 +1,86 @@
+.lite-header-container{
+    grid-column: 2/3;
+    grid-row: 1/4;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ocean-text-container{
+    position: relative;
+    width: 175px;
+    height: 86px;
+}
+.lite-header-container > p{
+    font-family: 'NothingYouCouldDo';
+    font-size: 4rem;
+    z-index: 1;
+    color: skyblue;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     1px 1px 0 #000,
+    1px 1px 0 #000;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+}
+  .waved-text-lite-bg{
+    color: whitesmoke;
+    position: absolute;
+    font-family: 'NothingYouCouldDo';
+    font-size: 4rem;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     1px 1px 0 #000,
+    1px 1px 0 #000; 
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+  .waved-text-lite{
+    color: skyblue;
+    position: absolute;
+    z-index: 2;
+    font-family: 'NothingYouCouldDo';
+    font-size: 4rem;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     1px 1px 0 #000,
+    1px 1px 0 #000; 
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    animation: make-wave 3s ease-in-out infinite;
+  }
+    
+  @keyframes make-wave {
+    0%,
+    100% {
+        clip-path: polygon(
+            0% 35%,
+            16% 34%,
+            33% 40%,
+            54% 50%,
+            70% 51%,
+            84% 49%,
+            100% 42%,
+            100% 100%,
+            0% 100%
+        );
+    }
+
+    50% {
+        clip-path: polygon(
+            0% 50%,
+            15% 55%,
+            34% 56%,
+            51% 52%,
+            67% 40%,
+            84% 35%,
+            100% 36%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}

@@ -1,0 +1,28 @@
+
+
+.ripple-button{
+    height: 60px;
+    min-width: 150px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 107,41,1);
+    border-radius: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+.ripple-button:hover,.ripple-button:focus{
+    background-color: rgba(255, 107,41,0.9);
+    border: 1px solid rgb(244, 84, 26,0.9)
+}
+.ripple-button > p{
+    padding: 35px 34px;
+    margin: 0px;
+    font-size: clamp(18px,24px,28px);
+}

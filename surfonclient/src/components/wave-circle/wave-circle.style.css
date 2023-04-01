@@ -1,0 +1,53 @@
+
+.wave-circle{
+    display: inline;
+    position: absolute;
+    top: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 1.25rem;
+    border: 1px black solid;
+    background-color: whitesmoke;
+    animation: make-wave 3s ease-in-out infinite;
+    z-index: 1;
+}
+.wave-circle-bg{
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 1.25rem;
+    top: 50%;
+    border: 1.5px black solid;
+    background-color: whitesmoke;
+    background-color: skyblue;
+}
+@keyframes make-wave {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 35%,
+			16% 34%,
+			33% 40%,
+			54% 50%,
+			70% 51%,
+			84% 49%,
+			100% 42%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 50%,
+			15% 55%,
+			34% 56%,
+			51% 52%,
+			67% 40%,
+			84% 35%,
+			100% 36%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}

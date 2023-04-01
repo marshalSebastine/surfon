@@ -1,0 +1,133 @@
+/* taking width of button as diameter of ripple */
+
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.side-menu{
+    background:  white;
+    overflow-y: hidden;
+    height: 98vh;
+    position: fixed;
+    z-index: 3;
+    top: 10px;
+    left: 0px;
+    border-radius: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.active{
+    transform: translateX(8px);
+}
+.nav-menu-items {
+  width: 100%;
+  max-height: 98%;
+  padding: 0;
+  overflow-y: scroll;
+  position: relative;
+  top: 60px;
+}
+
+.toplistelement{
+  width: 100%;
+  height: 100px;
+}
+.nav-title, .subnav-title{
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  height: 100%;
+  width: 95%;
+  box-sizing: border-box;
+  margin: 0px 10px;
+  padding: 20px 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.subnav-title{
+  font-size: 22px;
+  font-weight: 450;
+  overflow-y: scroll;
+}
+span.ripple {
+  position: absolute; /* The absolute position we mentioned earlier */
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-title:not(.selectednav):hover{
+  background-color: gainsboro;
+  border-radius: 18px;
+}
+.subnav-title:not(.selectednav):hover{
+  background-color: gainsboro;
+  border-radius: 18px;
+}
+.selectednav {
+  border-radius: 18px;
+  background-color: rgba(255, 107, 41, 0.24);
+  color: rgba(255, 107,41,1);
+}
+
+
+.contracted{
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease-out;
+  align-self: flex-end;
+}
+.expanded{
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-out;
+  align-self: flex-end;
+}
+.subnav-menu-items{
+  width: 100%;
+  display: none;
+  padding: 0;
+}
+.subnav-menu-items.active{
+  display: block;
+}
+.nav-text,.subnav-text{
+  padding: 10px 0px;
+  position: relative;
+  overflow: hidden;
+}
+.expandednavitem{
+  border-radius: 18px;
+  background-color: rgba(250, 102, 36, 0.14);;
+
+}
+.expandednavitem > .nav-title:hover{
+  background-color: transparent;
+}
+@media only screen and (max-width: 750px) {
+  .side-menu{
+    max-height: 90vh;
+  }
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .side-menu {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+    .nav-title,.subnav-title{
+      margin: 0px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

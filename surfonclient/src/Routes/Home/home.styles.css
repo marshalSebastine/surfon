@@ -1,0 +1,136 @@
+@keyframes text-up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  4% {
+    transform: translateY(80px) ;
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(0) ;
+    opacity: 1;
+  }
+}
+
+.slide-bg{
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 840px;
+}
+.slide-element{
+  width: 100%;
+}
+
+.logo-image{
+  margin: 50px auto;
+  box-sizing: border-box;
+  max-width: 100%;
+  transform: scale(2);
+}
+.car-logo-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.text-body {
+    color: white;
+    font-weight: 400;
+    line-height: 1;
+    opacity: 0;
+    padding: 0;
+}
+
+.socialmedia-icons{
+  height: 55px;
+  width: 55px;
+  margin: 50px 40px;
+  color:  rgb(38, 136, 212);
+  opacity: 0.58;
+  cursor: pointer;
+}
+.celebrate-text{
+  color: #199588;
+  font-family: "Montserrat", Sans-serif;
+  text-align: center;
+  font-size: 41px;
+  font-weight: 600;
+  padding: 0 10px;
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+.activity-bg{
+  margin-top: 70px;
+  max-width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  background-position: bottom -50px center;
+  background-repeat: no-repeat;
+}
+.socialmedia-icons:hover{
+  opacity: 0.9;
+}
+.get-text-up {
+  animation: text-up 1.5s ease-in-out 0.5s;
+  animation-fill-mode: forwards;
+}
+.contact-socialmedia{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sub-title{
+  font-size: clamp(14px,26px,48px);
+  margin-bottom: 65px;
+}
+.main-title{
+  font-size: clamp(28px,40px,84px);
+  margin-bottom: 20px;
+}
+.reviewbox .reviewbox-top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reviewbox{
+  margin-top: 15px;
+}
+.reviewbox-top{
+  gap: 8px;
+}
+.reviewbox-top p {
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+@media only screen and (max-width: 550px) {
+  .logo-image{
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 800px) {
+    .slide-bg{
+      height: 300px;
+    }
+    .activity-bg{
+      height: 400px;
+      background-size: cover;
+      background-attachment: scroll;
+      background-position: bottom center;
+    }
+}

@@ -1,0 +1,99 @@
+.hamburger-shell{
+    position: fixed;
+    overflow: clip;
+    top: 3%;
+    left: 1%;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.hamburger-top, .hamburger-middle, .hamburger-bottom{
+    background-color: #e6f3ff;
+    box-shadow: 1px 1px 4px 0.5px black;
+    width: 45px;
+    height: 5px;
+    /* position: absolute; */
+    /* top: 10px; */
+    transition: all 500ms ease-in-out;
+}
+
+.rotate-back{
+    transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    height: 1.5px;
+    width: 31px;
+    position: absolute;
+    top: 19px; 
+    box-shadow: none;
+    background-color: black;
+}
+
+.rotate{
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    position: absolute;
+    height: 1.5px;
+    width: 31px;
+    top: 19px;
+    box-shadow: none;
+    background-color: black;
+}
+.become-circle{
+    box-shadow: none;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px; 
+    animation-duration: 1s;
+    animation-name: make-ring;
+    animation-fill-mode:forwards;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width: 550px) {
+    .hamburger-shell{
+        left: 3%;
+        top: 3%;
+        /* height: 30px; */
+    }
+}
+
+@keyframes make-ring {
+    from {
+        border: 3px solid black;    
+    }
+    5%{
+        width: 17px;
+        height: 17px;
+        border-radius:  17px;
+        background-color: transparent;
+    }
+    30%{
+        width: 25px;
+        height: 25px;
+        border-radius:  25px;
+    }
+    70%{
+        width: 30px;
+        height: 30px;
+        border-radius:  30px;
+    }
+    100%{
+        width: 36px;
+        height: 36px;
+        border-radius: 36px;
+        border: 3px solid black;
+        background-color: transparent;
+    }
+    
+}

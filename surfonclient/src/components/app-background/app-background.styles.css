@@ -1,0 +1,25 @@
+.cover-bg{
+  background-image: url("../../assets/boardsunset-blurred.jpg");
+  height: 100vh; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows:repeat(3, 1fr);
+  /* cover the entire element */
+  background-size: cover;
+  transition: height 0.7s ease-in-out;
+}
+.cover-bg.get-small{
+  height: 400px;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .cover-bg {
+    background-attachment: scroll;
+  }
+}
+

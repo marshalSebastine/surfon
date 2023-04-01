@@ -1,0 +1,63 @@
+.header-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+
+  .header-container h1{
+    font-family: 'NothingYouCouldDo';
+    position: absolute;
+    font-size: 5rem;
+    z-index: 1;
+    color: skyblue;
+    text-shadow:
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+     -2px 2px 0 #000,
+      2px 2px 0 #000;
+  
+  }
+  .waved-text-bg{
+    color: whitesmoke;
+    /* opacity: 70%; */
+  }
+  .waved-text{
+    color: skyblue;
+    animation: make-wave 3s ease-in-out infinite;
+  }
+  
+  
+  @keyframes make-wave {
+      0%,
+      100% {
+          clip-path: polygon(
+              0% 35%,
+              16% 34%,
+              33% 40%,
+              54% 50%,
+              70% 51%,
+              84% 49%,
+              100% 42%,
+              100% 100%,
+              0% 100%
+          );
+      }
+  
+      50% {
+          clip-path: polygon(
+              0% 50%,
+              15% 55%,
+              34% 56%,
+              51% 52%,
+              67% 40%,
+              84% 35%,
+              100% 36%,
+              100% 100%,
+              0% 100%
+          );
+      }
+  }

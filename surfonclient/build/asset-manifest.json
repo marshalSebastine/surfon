@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2d9e42d2.css",
+    "main.js": "/static/js/main.2a18c1c3.js",
+    "static/js/787.80f88e71.chunk.js": "/static/js/787.80f88e71.chunk.js",
+    "static/media/boardsunset-blurred.jpg": "/static/media/boardsunset-blurred.80c5196ada4e81b6ce4f.jpg",
+    "static/media/NothingYouCouldDo-Regular.ttf": "/static/media/NothingYouCouldDo-Regular.3170b8e5d362ca787108.ttf",
+    "index.html": "/index.html",
+    "main.2d9e42d2.css.map": "/static/css/main.2d9e42d2.css.map",
+    "main.2a18c1c3.js.map": "/static/js/main.2a18c1c3.js.map",
+    "787.80f88e71.chunk.js.map": "/static/js/787.80f88e71.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d9e42d2.css",
+    "static/js/main.2a18c1c3.js"
+  ]
+}
