@@ -23,7 +23,7 @@ let Corousel: React.FC<PropsPassed> = ({children}) => {
     const lastChild = children[children.length-1]
     let currentSlide = useSelector(selectCorouselSlide)
     let totalSlides = useSelector(selectCorouselTotalSlide)
-    let [corStyle,setCorStyle] = useState<React.CSSProperties>({
+    const [corStyle,setCorStyle] = useState<React.CSSProperties>({
         transition: 'ease-out 0.5s',
         transform: `translate3d(0,0,0)`,
     })

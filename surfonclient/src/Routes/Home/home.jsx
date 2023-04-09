@@ -19,6 +19,7 @@ import ReviewCorousel from "../../components/review-corousel/review-corousel";
 import { ReactComponent as GoogleLogo } from "../../assets/google.svg";
 import AboutBayOfLife from "../../components/AboutBayOfLife/AboutBayOfLife";
 import ContactUs from "../../components/ContactUs/ContactUs";
+
 const Home = () => {
     let currentSlide = useSelector(selectCorouselSlide)
 

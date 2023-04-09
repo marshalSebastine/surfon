@@ -54,7 +54,7 @@ export const SideMenuData = [
     },
     {
       title: "Book a Class",
-      path: "/book-class",
+      path: "/bookclass",
       linkIndex: 6,
       icon: <MdIcons.MdClass/>,
       cName: "nav-text"

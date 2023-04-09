@@ -5,6 +5,8 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 import  {selectIsDesktop}  from './store/reducers/windowproperties/windowproperties.selector.js';
 import  NavigationBar from './Routes/Navigation/navigation';
 import Home from './Routes/Home/home';
+import Footer from "./components/Footer/Footer.jsx";
+import BookClass from "./Routes/BookClass/BookClass.jsx";
 function App() {
   const isDeskTop = useSelector(selectIsDesktop)
 
@@ -16,6 +18,7 @@ function App() {
           <Route element={<NavigationBar />} path="/">
               <Route index element={<Home/>} />
               <Route path='/surfing' element={<h1>Surfng</h1>}/>
+              <Route path='/bookclass' element={<BookClass/>}/>
           </Route>
       </Routes>
     </>
