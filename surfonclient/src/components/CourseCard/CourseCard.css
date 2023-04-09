@@ -1,0 +1,119 @@
+.bookbytext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    font-size: xx-large;
+    transition: opacity ease-out 250ms;
+}
+.coursecard {
+    display: block;
+    margin: 1em;
+    width: 450px;
+    box-sizing: border-box;
+}
+.courselink{
+    position: relative;
+    display: block;
+}
+.coursecardprice{
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: larger;
+    text-align: center;
+}
+.coursecardtitle{
+    text-decoration: none;
+    margin: 0;
+    margin-top: 10px;
+    font-size: x-large;
+    text-align: center;
+    color: black;
+}
+.courselink::after,
+.courselink::before {
+    content: '';
+    position: absolute;
+    top: 1.25em;
+    bottom: 1.25em;
+    left: 1.25em;
+    right: 1.25em;
+    opacity: 1;
+    transition: transform ease-out 250ms;
+}
+
+.courselink::before {
+    border-top: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+    z-index: 1;
+    transform: scale(0, 1);
+    
+}
+
+.courselink::after {
+    border-left: 1.5px solid white;
+    border-right: 1.5px solid white;
+    transform: scale(1, 0);
+}
+
+.bookbytitleimage {
+    width: 100%;
+    height: 100%;
+    transition: opacity ease-out 250ms;
+}
+
+.courselink:hover::before {
+    transform: scale(1.05, 1);
+}
+
+.courselink:hover::after {
+    transform: scale(1, 1.05);
+}
+
+.courselink:hover>.bookbytitleimage {
+    opacity: 0.6;
+}
+
+.courselink:hover .bookbytext {
+    opacity: 1;
+}
+
+@media (pointer: coarse) {
+    
+    .courselink::before {
+        transform: scale(1.05, 1);
+    }
+
+    .courselink::after {
+        transform: scale(1, 1.05);
+    }
+    .bookbytext{
+        opacity: 1;
+    }
+
+    .bookbytitleimage {
+        opacity: 0.6;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px){
+    
+    .coursecard {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 600px) {
+
+    /* styles for touch devices or mobile devices */
+    .bookbytext {
+        opacity: 1;
+        font-size: large;
+    }
+    .coursecard{
+        width: 80%;
+    }
+
+}
