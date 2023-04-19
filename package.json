@@ -5,7 +5,13 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix surfonclient",
+    "clientinstall": "npm install --prefix surfonclient",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix surfonclient && npm run build -- prefix surfonclient"
   },
   "keywords": [],
   "author": "marshal sebastine",
