@@ -1,14 +1,27 @@
-import mongoose from 'mongoose';
 import coursesData from './Models/Courses.js';
+import mongoose from 'mongoose';
 import { relatedCourses } from './Models/Courses.js';
 
-const dbUrl = 'mongodb://127.0.0.1:27017/surfondb';
+
+
 
 class DataBaseManager {
     static courseModel = DataBaseManager.defineCourseModel()
-
-    static connect() {
-        mongoose.connect(dbUrl,{ useNewUrlParser: true, useUnifiedTopology: true }).then(() => { console.log('mongoose connected!') })
+    static collection = 'Course'
+    static cachedConnection = null
+    static dbUrl = `mongodb+srv://${process.env.DBUSRNAME}:${process.env.DBPSSWRD}@cluster0.fwz1qfh.mongodb.net/${DataBaseManager.collection}?retryWrites=true&w=majority`;
+    
+    static async connect() {
+        try{
+            if(!DataBaseManager.cachedConnection){
+                DataBaseManager.cachedConnection = await mongoose.connect(DataBaseManager.dbUrl,
+                                                    { useNewUrlParser: true, useUnifiedTopology: true })
+            }else{
+                console.log('db already connected')
+            }
+        }catch(er){
+            console.log('connection error',er);
+        }
     }
 
     // Defines and returns a mongoose model for Courses
