@@ -4,17 +4,16 @@ import { relatedCourses } from './Models/Courses.js';
 
 
 
-
 class DataBaseManager {
     static courseModel = DataBaseManager.defineCourseModel()
-    static collection = 'Course'
     static cachedConnection = null
-    static dbUrl = `mongodb+srv://${process.env.DBUSRNAME}:${process.env.DBPSSWRD}@cluster0.fwz1qfh.mongodb.net/${DataBaseManager.collection}?retryWrites=true&w=majority`;
+
     
     static async connect() {
         try{
             if(!DataBaseManager.cachedConnection){
-                DataBaseManager.cachedConnection = await mongoose.connect(DataBaseManager.dbUrl,
+                console.log(DataBaseManager.dbUrl)
+                DataBaseManager.cachedConnection = await mongoose.connect(process.env.DBURL,
                                                     { useNewUrlParser: true, useUnifiedTopology: true })
             }else{
                 console.log('db already connected')
