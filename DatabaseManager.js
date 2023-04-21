@@ -10,11 +10,12 @@ class DataBaseManager {
 
     
     static async connect() {
-        console.log('dburl is',process.env.DBURL)
+        let url = process.env.DBURL
+        console.log(url)
         try{
             if(!DataBaseManager.cachedConnection){
-                console.log(DataBaseManager.dbUrl)
-                DataBaseManager.cachedConnection = await mongoose.connect(process.env.DBURL,
+                console.log('hey im here',url)
+                DataBaseManager.cachedConnection = await mongoose.connect(url,
                                                     { useNewUrlParser: true, useUnifiedTopology: true })
             }else{
                 console.log('db already connected')
