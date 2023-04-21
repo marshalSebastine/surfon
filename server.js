@@ -32,6 +32,9 @@ app.get('/maps/api/', (req, res) => {
 
 app.get('/allcourses',(_,res) => {
   DataBaseManager.getAllCourses().then((courses) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://surfonpeople.onrender.com'); // or '*' for any origin
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     res.send(courses)
   })
 })
