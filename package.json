@@ -11,7 +11,7 @@
     "client": "npm start --prefix surfonclient",
     "clientinstall": "npm install --prefix surfonclient",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix surfonclient && npm run build -- prefix surfonclient"
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix surfonclient && npm run build --prefix surfonclient"
   },
   "keywords": [],
   "author": "marshal sebastine",
