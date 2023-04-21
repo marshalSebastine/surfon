@@ -10,6 +10,7 @@ class DataBaseManager {
 
     
     static async connect() {
+        console.log('dburl is',process.env.DBURL)
         try{
             if(!DataBaseManager.cachedConnection){
                 console.log(DataBaseManager.dbUrl)

@@ -11,9 +11,13 @@ const port = process.env.PORT || 5000; //Line 3
 
 // This displays message that the server running and listening to specified port
 app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
+try{
+  await DataBaseManager.connect()
+  await DataBaseManager.addCourseData()
+}catch(er){
+  console.log(er)
+}
 
-await DataBaseManager.connect()
-await DataBaseManager.addCourseData()
 
 DataBaseManager.getAllCourses().then((courses) => {
   courses.forEach((course) => {console.log(course)})
