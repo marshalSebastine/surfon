@@ -11,7 +11,7 @@ let BookClass = () => {
     const [filteredCourses, setFilteredCourses] = useState(courses);
 
     useEffect(() => {
-        fetch('/allcourses').then((response) => {
+        fetch('https://surfon.onrender.com/allcourses').then((response) => {
             if (response.status !== 200) {
                 console.error('courses fetching error', response.status)
                 return
