@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.29e1249c.css",
+    "main.js": "/static/js/main.47991272.js",
+    "static/js/787.80f88e71.chunk.js": "/static/js/787.80f88e71.chunk.js",
+    "static/media/bookingbg.jpg": "/static/media/bookingbg.8d15b7165591f7f6dc99.jpg",
+    "static/media/rename.jpg": "/static/media/rename.1ec7b7e00a57d9acfd6a.jpg",
+    "static/media/standuppaddling.jpg": "/static/media/standuppaddling.c50afee14f8d4a3464f5.jpg",
+    "static/media/oceanswimming.jpg": "/static/media/oceanswimming.5fe69c521b54853bb363.jpg",
+    "static/media/kayaking.jpg": "/static/media/kayaking.ed13c6a088aa29acc046.jpg",
+    "static/media/boardsunset-blurred.jpg": "/static/media/boardsunset-blurred.80c5196ada4e81b6ce4f.jpg",
+    "static/media/truckwithboard.jpg": "/static/media/truckwithboard.1c2ece0b0775948011dd.jpg",
+    "static/media/team-outing-surfing.jpg": "/static/media/team-outing-surfing.92111f3df95094c5b53c.jpg",
+    "static/media/ocean-safety.jpg": "/static/media/ocean-safety.045b963d1ef92c3c108f.jpg",
+    "static/media/Heebo-Regular.ttf": "/static/media/Heebo-Regular.4dbbe613d25d93d40f37.ttf",
+    "static/media/NothingYouCouldDo-Regular.ttf": "/static/media/NothingYouCouldDo-Regular.3170b8e5d362ca787108.ttf",
+    "static/media/google.svg": "/static/media/google.8531f56f89169df6c8b13463ebe8835a.svg",
+    "index.html": "/index.html",
+    "main.29e1249c.css.map": "/static/css/main.29e1249c.css.map",
+    "main.47991272.js.map": "/static/js/main.47991272.js.map",
+    "787.80f88e71.chunk.js.map": "/static/js/787.80f88e71.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29e1249c.css",
+    "static/js/main.47991272.js"
+  ]
+}

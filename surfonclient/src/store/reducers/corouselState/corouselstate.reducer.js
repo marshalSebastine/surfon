@@ -14,14 +14,14 @@ const corouselSlice = createSlice({
     initialState,
     reducers: {
         incrementSlide: (state) => {
-            if(state.slide == state.totalSlides-1){
+            if(state.slide === state.totalSlides-1){
                 state.slide = 1
             }else{
                 state.slide += 1
             }
         },
         decrementSlide: (state) => {
-            if(state.slide == 0){
+            if(state.slide === 0){
                 state.slide = state.totalSlides-2
             }else{
                 console.log('minusing')

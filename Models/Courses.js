@@ -7,7 +7,17 @@ let Courses = [{title: 'Discover Kayaking 1.5 hrs',startPrice: 1500,popularity: 
                           {title: 'SUP PRO: 10 days Course',startPrice: 17000,popularity: 4, imgName: 'booksupocean10'},  
                           {title: 'Discover Surf Standard',startPrice: 1500,endPrice:1800,popularity: 9, imgName: 'bookdiscsurfstandard'},  
                           {title: 'Discover Surf – 101 Private Session',startPrice: 2000,endPrice:2500,popularity: 9, imgName: 'bookdiscsurfprivate'},  
-                          {title: 'Discover Surf EXPERIENCE 2.5 hrs',startPrice: 3000, endPrice:3500,popularity: 6,  imgName: 'bookdssurfexp'}, 
+                          {title: 'Discover Surf EXPERIENCE 2.5 hrs',startPrice: 3000, endPrice:3500,popularity: 6,  imgName: 'bookdssurfexp',
+                           learn: ['Advanced Introduction to Surfing and ocean.',
+                           'Advanced Ocean literacy & safety','Free float: Ocean flotation',
+                           'Learn to manage Currents and tides',
+                           'Surfing white water waves Longer session How to read the ocean and weather.Deeper Understanding of waves and rips.'],
+                            desctitle: '2.5 hours of awesomeness! ',
+                            info: ['Tuesday to Sunday','1:1 Instructor Ratio','NON SWIMMERS WELCOME'],
+                            descbody: `This is where beginners discover the joy of surfing.
+                            Perfect for newbies, novice swimmers who love the ocean.
+                            Includes basic ocean safety training, ocean swimming surfing in a One on One format.
+                             Brand new package from the ocean experts at  experience`}, 
                           {title: 'First Wave Foundation Course',startPrice: 18000, endPrice:24000,popularity: 3, imgName: 'bookfirstwave'},
                           {title: 'Next Wave Advanced Beginner Course',startPrice: 9600, endPrice:12500,popularity: 3, imgName: 'booknextwavwadvncd'}, 
                           {title: 'Cut back Intermediate Course',startPrice: 8000, endPrice:12000,popularity: 6, imgName: 'bookcutbackcrse'} ]

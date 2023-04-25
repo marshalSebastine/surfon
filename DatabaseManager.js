@@ -11,10 +11,9 @@ class DataBaseManager {
     
     static async connect() {
         let url = process.env.DBURL
-        console.log(url)
         try{
             if(!DataBaseManager.cachedConnection){
-                console.log('hey im here',url)
+
                 DataBaseManager.cachedConnection = await mongoose.connect(url,
                                                     { useNewUrlParser: true, useUnifiedTopology: true })
             }else{
@@ -37,6 +36,11 @@ class DataBaseManager {
             endPrice: Number,
             popularity: Number,
             imgName: String,
+            learn: [String],
+            desctitle: String,
+            info: [String],
+            descbody: String,
+            
             relatedCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }]
         });
 

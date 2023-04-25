@@ -1,0 +1,27 @@
+.productcontainer{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+.productimage{
+    width: 700px;
+    background-color: red;
+}
+.productdateselect{
+    width: 47%;
+    background-color: green;
+}
+
+@media only screen and (max-width: 950px) {
+    .productimage{
+        max-width: 70%;
+    }
+    .productdateselect{
+        width: 90%;
+    }
+}
