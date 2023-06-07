@@ -63,7 +63,9 @@ app.post('/orders', async (req, res) => {
     };
 
     const order = await instance.orders.create(options);
-
+    res.setHeader('Access-Control-Allow-Origin', origin)
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     if (!order) return res.status(500).send("Some error occured");
     res.json(order);
 
