@@ -24,7 +24,6 @@ const corouselSlice = createSlice({
             if(state.slide === 0){
                 state.slide = state.totalSlides-2
             }else{
-                console.log('minusing')
                 state.slide -= 1
             }
         },

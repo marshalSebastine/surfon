@@ -21,9 +21,9 @@
     position: absolute;
     background-color: lightgreen;
     cursor: pointer;
-    height: 60px;
-    width: 60px;
-    border-radius: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
 
     bottom: 20px;
     right: 32px;
@@ -47,11 +47,11 @@
 }
 .whatsapp-icon{
     justify-self: flex-end;
-    font-size: xx-large;
+    font-size: x-large;
 }
 @keyframes growtext {
    100% {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
     display: inline-block;
    } 

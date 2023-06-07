@@ -48,7 +48,7 @@ let Corousel: React.FC<PropsPassed> = ({children}) => {
     function getPosition(event: React.TouchEvent<HTMLOListElement>) {
         const { pageX } = event.touches[0];
         let value = (pageX/corousel.current.clientWidth)*100;
-        // console.log(`get position val is ${pageX}`)
+
         return value;
     }
     function onTransitionEnd(evnt: React.TransitionEvent<HTMLOListElement>){

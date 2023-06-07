@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 // import  {selectIsDesktop}  from './store/reducers/windowproperties/windowproperties.selector.js';
 import  NavigationBar from './Routes/Navigation/navigation';
 import Home from './Routes/Home/home';
+import Checkout from "./Routes/Checkout/Checkout";
 import BookClass from "./Routes/BookClass/BookClass.jsx";
 import ProductDetails from "./Routes/ProductDetails/productDetails";
 function App() {
@@ -18,8 +19,8 @@ function App() {
               <Route index element={<Home/>} />
               <Route path='/surfing' element={<h1>Surfng</h1>}/>
               <Route path='/bookclass' element={<BookClass/>} />
-              <Route path="/bookclass/checkoutproduct" element={<ProductDetails/>}/> 
-
+              <Route path="/bookclass/addproduct" element={<ProductDetails/>}/> 
+              <Route path="/checkout" element={<Checkout/>}/>
           </Route>
       </Routes>
     </>

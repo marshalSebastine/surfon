@@ -6,3 +6,8 @@ export const selectCartCurrentProduct = createDraftSafeSelector(selectCartState,
     (cartstate) => {
         return cartstate.currentProduct
     })
+
+export const selectCartProducts = createDraftSafeSelector(selectCartState,
+     (cartstate) => cartstate.cartProducts)
+
+export const selectAllProducts = createDraftSafeSelector(selectCartState,(cartstate) => cartstate.allProducts)

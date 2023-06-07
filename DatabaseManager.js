@@ -39,8 +39,11 @@ class DataBaseManager {
             learn: [String],
             desctitle: String,
             info: [String],
+            intro: String,
             descbody: String,
-            
+            included: [String],
+            expertiselevel: String,
+            multipleday: Boolean,
             relatedCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }]
         });
 
@@ -52,13 +55,19 @@ class DataBaseManager {
             await DataBaseManager.courseModel.insertMany(coursesData)
             await DataBaseManager.addRelatedCourses()
         }catch(err){
-            console.log('error thrown when inserting courses ',err)
+            console.log('error thrown when inserting courses',err)
         }
     }
 
     static async getAllCourses(){
         let results = await DataBaseManager.courseModel.find()
         return results
+    }
+
+    static async getProduct(id){
+        let res = await DataBaseManager.courseModel.findById(id)
+        console.log('hey product from db',res)
+        return res
     }
 
     static async  addRelatedCourses(){

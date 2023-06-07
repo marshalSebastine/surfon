@@ -26,8 +26,8 @@ let CourseCard = ({ course, goto, onhovertext,imgname, categorycard=false }) => 
                 </div>
             </div>
             { (title !== '') && <h3 className='coursecardtitle'>{course.title}</h3>}
-            {(course && course.endPrice) && <p className='coursecardprice'>{`${course.startPrice} - ${course.endPrice}`}</p>}
-            {(course && !(course.endPrice) && course.startPrice) && <p className='coursecardprice'>{`${course.startPrice}`}</p>}
+            {(course && course.endPrice) && <p className='coursecardprice'>{` ₹  ${course.startPrice} - ₹ ${course.endPrice}`}</p>}
+            {(course && !(course.endPrice) && course.startPrice) && <p className='coursecardprice'>{`₹ ${course.startPrice}`}</p>}
             
         </div>
     )

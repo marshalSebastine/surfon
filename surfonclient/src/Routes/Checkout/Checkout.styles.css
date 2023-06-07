@@ -1,0 +1,210 @@
+.checkoutcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartcontainer {
+    padding: 0 56px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.cart-empty-container{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartheader {
+    font-size: clamp(3rem, 4.5rem, 6rem);
+    text-align: center;
+}
+
+
+
+/* look here ------------------------*/
+
+
+
+.cartgridcontainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 20px;
+    align-items: center;
+}
+
+.cartwrapper{
+    display: grid;
+    width: 100%;
+    border-top: 1px solid black;
+    padding-top: 20px;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas:
+    "cartproductimage productremovebutton"
+    "productname productname"
+    "coursestartdate coursestartdate"
+    "cartproductquantitycontainer cartproductquantitycontainer"
+    "cartproductsubtotal cartproductsubtotal"
+    ;
+}
+
+.cartproductimage{
+    grid-area: cartproductimage;
+    display: block;
+    margin: auto;
+}
+
+.prdctremvebtn{
+    grid-area: productremovebutton;
+    padding: 25px;
+    margin: auto;
+    cursor: pointer;
+    display: block;
+}
+
+.productname{
+    grid-area: productname;
+    text-align: right;
+}
+.coursestartdate{
+    grid-area: coursestartdate;
+    text-align: right;
+}
+.coursestartdate::before{
+    content: "Date: ";
+    font-weight: 500;
+    font-size: larger;
+    float: left;
+}
+.productname::before{
+    content: "Product: ";
+    font-weight: 500;
+    font-size: larger;
+    float: left;
+}
+.cartproductquantitycontainer{
+    grid-area: cartproductquantitycontainer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartproductsubtotal{
+    grid-area: cartproductsubtotal;
+    text-align: right;
+}
+
+.quantitylabel{
+    font-weight: 500;
+    font-size: larger;
+    float: left;
+}
+.cartproductqntitywrap{
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+}
+.cartproductqntity{
+    width: 30px;
+    height: 30px;
+}
+.cartproductsubtotal::before{
+    content: "Subtotal: ";
+    font-weight: 500;
+    font-size: larger;
+    float: left;
+}
+.productdetailtitlecontainer{
+    display: none;
+}
+
+.cartproducttotalrow{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    text-align: center;
+}
+.cartttotalwrapper{
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carttotal{
+    font-size: xx-large;
+    font-weight: 700;
+    margin: 8px 0px;
+    padding: 0;
+}
+.carttotalvalue{
+    font-size: larger;
+    font-weight: 400;
+    margin: 8px 0px;
+    margin-left: 40px;
+    padding: 0;
+}
+.carttotalvalue::before{
+    content: "\20B9";
+    font-size: larger;
+    font-weight: 400;
+}
+@media (min-width: 850px) {
+    .productdetailtitlecontainer{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .productclosetitle,
+    .productimagetitle{
+        flex: 2 140px;
+    }
+    .cartproducttitle{
+        flex: 4 100px;
+        font-weight: 500;
+        font-size: large;
+    }
+    .productdatetitle,
+    .productpricetitle{
+        flex: 2 80px;
+        font-weight: 500;
+        font-size: large;
+    }
+    .productquantitytitle{
+        flex: 1 50px;
+        font-weight: 500;
+        font-size: large;
+        margin-left: 10px;
+    }
+    .cartwrapper {
+      grid-template-columns: 1fr 1fr 2fr 1fr 0.5fr 1fr;
+      grid-template-areas: 
+      "productremovebutton cartproductimage productname coursestartdate cartproductquantitycontainer cartproductsubtotal"
+    }
+    .cartproductsubtotal::before,
+    .productname::before,
+    .coursestartdate::before,
+    .quantitylabel
+    {
+        display: none;
+    }
+    .productname,
+    .coursestartdate,
+    .cartproductsubtotal
+    {
+        margin: auto;
+    }
+  }
+
+/* till here-------------------------------------------------------- */
+

@@ -55,7 +55,7 @@
 .nav-title, .subnav-title{
   text-decoration: none;
   color: black;
-  font-size: 24px;
+  font-size: 19px;
   height: 100%;
   width: 95%;
   box-sizing: border-box;
@@ -71,7 +71,7 @@
 }
 
 .subnav-title{
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 450;
   overflow-y: scroll;
 }

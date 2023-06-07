@@ -20,7 +20,6 @@ const ReviewCard = ({name,date,rating,desc}) => {
     const cardRef = useRef();
     const descRef = useRef();
     let isOverflow = useIsOverflow(descRef)
-    console.log(isOverflow)
     let rateDescStyle = {
         height: '75px'
     }
@@ -43,7 +42,6 @@ const ReviewCard = ({name,date,rating,desc}) => {
             ref.current.style.WebkitLineClamp = ''
             setTextAction('hide')
         }else{
-            console.log('reached')
             descRef.current.style.height = '75px'
             cardRef.current.style.height = '290px'
             ref.current.style.WebkitBoxOrient = 'vertical'

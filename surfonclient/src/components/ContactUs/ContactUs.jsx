@@ -19,8 +19,8 @@ const ContactUs = () => {
                            type={'email'} label={'Email*'} required={true} />
                 <MaterialButton buttonStyle={{marginTop: '60px'}} buttoncontent={'Submit'}/>
             </div>
-            <div className='contactusmap'>
-            </div>
+            {/* <div className='contactusmap'>
+            </div> */}
         </div>
     )
 }

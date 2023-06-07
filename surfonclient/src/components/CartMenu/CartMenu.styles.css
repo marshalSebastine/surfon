@@ -1,0 +1,120 @@
+.cart-menu-bar{
+    position: fixed;
+    top: 10px;
+    border-radius: 10px;
+    background-color: rgba(211, 211, 211,0.7);
+    transition: all 1s;
+    z-index: 102;
+    width: 250px;
+    height: 95vh;
+    right: -250px;
+    display: flex;
+    flex-direction: column;
+}
+.cartmenubaritemwrapper{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.drawcart{
+    right: 10px;
+}
+.cart-menu-head{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+    background-color: darkgray;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-menubar-item{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    margin: 10px 0px;
+    background-color: #ccc;
+    justify-content: space-around;
+    border: 1px solid darkgray;
+    align-items: center;
+}
+.cart-menubar-data{
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.cart-menubar-data p{
+    padding: 0;
+    margin: 0;
+}
+.cart-menubar-item-image{
+    margin: 5px 2px;
+    width: 65px;
+    height: 65px;
+}
+.cart-menubar-data-strip p{
+    width: 155px;
+    white-space: nowrap;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cart-menubar-data-strip{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.menubardate::before{
+    content: 'date: ';
+    font-weight: 600;
+}
+.menubar-qntity::before{
+    content: 'qntity: ';
+    font-weight: 600;
+}
+.cartboxcontainer{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: fixed;
+    background-color: #ccc;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 40vh;
+    text-align: center;
+    right: 15px;
+    z-index: 100;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+.carticons{
+    width: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25px;
+}
+.cartcounter{
+    position: absolute;
+    align-self: normal;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    top: -10px;
+    left: -5px;
+}
+
+#cartclosebutton:hover, #cartclosebutton:active {
+    transition: all 1s ease-in-out;
+    transform: rotate(360deg);
+}

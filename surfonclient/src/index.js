@@ -8,13 +8,17 @@ import './fonts/Heebo/static/Heebo-Regular.ttf';
 import store from './store/store';
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom';
+import { persistor } from './store/store'
+import { PersistGate } from 'redux-persist/integration/react';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-            <BrowserRouter>
-                 <App store={store} />
-            </BrowserRouter>
+            <PersistGate loading={null} persistor={persistor}>
+                <BrowserRouter>
+                    <App store={store} />
+                </BrowserRouter>
+            </PersistGate>
         </Provider>
     </React.StrictMode>
 );

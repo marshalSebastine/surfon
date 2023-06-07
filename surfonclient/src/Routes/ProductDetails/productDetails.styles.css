@@ -1,22 +1,204 @@
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-7px); }
+    20%, 40%, 60%, 80% { transform: translateX(7px); }
+    100% { transform: translateX(0); }
+  }
+  .shake {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+
 .productcontainer{
     box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: top;
     justify-content: space-around;
-    padding: 20px;
-    background-color: antiquewhite;
+    padding: 20px 10px;
 }
 .productimage{
-    width: 700px;
-    background-color: red;
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+    margin-top: 60px;
+}
+.productghostimage{
+    position: fixed;
+    width: 250px;
+    height: 120px;
+    z-index: 12;
+    opacity: 0.8;
+    transition: all 1s ease;
+}
+.moveghost{
+    width: 50px;
+    height: 50px;
+    transform: translate(0,-10px);
+}
+.producttitle{
+    font-size: clamp(1.3rem,2.6rem,8.3rem);
+    line-height: 1;
+    margin-top: 0px;
+    font-weight: 800;
+}
+.productprice{
+    font-size: larger;
 }
 .productdateselect{
     width: 47%;
-    background-color: green;
+}
+.productlevel{
+    font-size: x-large;
+    font-weight: 500;
+    line-height: 1;
+}
+.dateselectortable{
+    font-size: 1.8rem;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    border-spacing: 0;
+    overflow: hidden;
+    margin: 20px 0px;
+    width: 97%;
+}
+.dateselectorbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: #dcd7ca;
+}
+.dayselectortableheader{
+    border: 0.1rem solid #dcd7ca;
+    line-height: 1.4;
+    margin: 0;
+    font-size: medium;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+.dayselector{
+    border: 0.1rem solid #dcd7ca;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    overflow: visible;
+    padding: 0.5em;
+}
+.selectday{
+    font-size: medium;
+    border-color: #dcd7ca;
+}
+.dateselectlabelcol, .dateselectcol{
+    padding: 5px 5px 5px 0px;
+    vertical-align: middle;
+    line-height: 1.4;
+    margin: 0;
+    overflow: visible;
+}
+.dateselectcol{
+    display: flex;
+    padding: 0;
+    align-items: center;
+}
+.dateselectlabel{
+    margin: 0px;
+    padding: 0;
+    display: block;
+    border-color: #dcd7ca;
+    font-size: large;
+    font-weight: 600;
+}
+.dateselectinput{
+    margin: 5px;
+    font-size: medium;
+    min-height: 30px;
+}
+.purchasecontainer,.productcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    justify-content: space-around;
+    text-align: left;
+}
+.purchasecontainer{
+    justify-content: space-between;
+    align-content: center;
+}
+.productdetailprice{
+    font-size: large;
+    font-weight: 500;
+}
+.productdetailprice::before{
+    content: 'Total Price: \20B9';
+    font-size: large;
+    font-weight: 600;
 }
 
+.dateselectinput:invalid+div::after{
+    content: "𐄂";
+    position: relative;
+    top: -5px;
+    width: 50px;
+    height: 50px;
+}
+.dateselectinput:valid+div::after{
+    content:"☑️";
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.description-container{
+    width: 45%;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.classNumberInputLabel{
+    font-size: large;
+    font-weight: 600;
+}
+
+.descandrelated{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+.relatedcoursesbox{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 30px;
+    justify-content: space-around;
+}
+.relatedcoursewrapper{
+    width: 48%;
+}
+
+.classNumberInput{
+    font-size: medium;
+    padding: 7px;
+    max-width: 50px;
+}
+#dditem::before{
+    content: '☑️: ';
+}
+@media only screen and (max-width: 700px){
+    .description-container,.relatedcoursewrapper{
+        width: 100%
+    }
+}
 @media only screen and (max-width: 950px) {
     .productimage{
         max-width: 70%;

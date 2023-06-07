@@ -17,7 +17,6 @@ const ReviewCorousel = () => {
                 left: scrollTo,
                 behavior: 'smooth'
             })
-            console.log(`final scroll position ${corousel.scrollLeft}`)
         }
         
 

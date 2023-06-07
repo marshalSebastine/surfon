@@ -21,8 +21,17 @@
     background-color: rgba(255, 107,41,0.9);
     border: 1px solid rgb(244, 84, 26,0.9)
 }
+.ripple-button.disabled-button{
+    background-color: rgba(248, 136, 85, 0.689);
+    border: 1px solid rgba(248, 136, 85, 0.689);
+}
+.ripple-button.disabled-button:hover,.ripple-button.disabled-button:focus{
+    background-color: rgba(248, 136, 85, 0.689);
+    border: 1px solid rgba(248, 136, 85, 0.689);
+    cursor: default;
+}
 .ripple-button > p{
     padding: 35px 34px;
     margin: 0px;
-    font-size: clamp(18px,24px,28px);
+    font-size: clamp(14px,16px,24px);
 }

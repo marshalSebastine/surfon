@@ -25,7 +25,7 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 840px;
+  height: 540px;
 }
 .slide-element{
   width: 100%;
@@ -35,7 +35,7 @@
   margin: 50px auto;
   box-sizing: border-box;
   max-width: 100%;
-  transform: scale(2);
+  transform: scale(1.5);
 }
 .car-logo-container{
   display: flex;
@@ -53,8 +53,8 @@
 }
 
 .socialmedia-icons{
-  height: 55px;
-  width: 55px;
+  height: 35px;
+  width: 35px;
   margin: 50px 40px;
   color:  rgb(38, 136, 212);
   opacity: 0.58;
@@ -64,7 +64,7 @@
   color: #199588;
   font-family: "Montserrat", Sans-serif;
   text-align: center;
-  font-size: 41px;
+  font-size: clamp(25px,30px,38px);
   font-weight: 600;
   padding: 0 10px;
   margin: 0;
@@ -74,7 +74,7 @@
 .activity-bg{
   margin-top: 70px;
   max-width: 100%;
-  height: 600px;
+  height: 400px;
   background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
@@ -128,7 +128,7 @@
       height: 300px;
     }
     .activity-bg{
-      height: 400px;
+      height: 300px;
       background-size: cover;
       background-attachment: scroll;
       background-position: bottom center;

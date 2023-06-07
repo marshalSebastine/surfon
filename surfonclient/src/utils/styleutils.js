@@ -25,6 +25,26 @@ export function randomNumber(min, max) {
 }
 
 
+export function isDayWeekend(dateString) {
+  // Create a new Date object from the input string
+  const date = new Date(dateString);
+
+  // Get the day of the week (0-6, where 0 is Sunday)
+  const dayOfWeek = date.getDay();
+
+  // Return true if the day of the week is Saturday or Sunday
+  return dayOfWeek === 6 || dayOfWeek === 0;
+}
+
+
+export function getPrice(date,startPrice,endPrice,quantity) {
+  if (isDayWeekend(date)){
+      return( endPrice * quantity)
+  }else{
+    return ( startPrice * quantity)
+  }
+}
+
 export const useIsOverflow = (ref, callback) => {
   const [isOverflow, setIsOverflow] = React.useState(undefined);
 

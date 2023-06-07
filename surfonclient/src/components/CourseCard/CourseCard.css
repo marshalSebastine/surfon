@@ -11,7 +11,7 @@
 .coursecard {
     display: block;
     margin: 1em;
-    width: 450px;
+    width: 280px;
     box-sizing: border-box;
 }
 .courselink{
@@ -102,7 +102,7 @@
 @media only screen and (min-width: 600px) and (max-width: 1000px){
     
     .coursecard {
-        width: 40%;
+        width: 220px;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -113,7 +113,7 @@
         font-size: large;
     }
     .coursecard{
-        width: 80%;
+        width: 200px;
     }
 
 }

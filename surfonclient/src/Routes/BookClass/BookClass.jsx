@@ -1,17 +1,28 @@
 import { useEffect, useState } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
 import './BookClass.css';
+import Lottie from "lottie-react";
+import resourcenotfoundanimation from '../../assets/resourcenotfound.json';
+import { setAllProducts } from '../../store/reducers/cartState/cartstate.reducer';
+import { selectAllProducts } from '../../store/reducers/cartState/cartstate.selector';
 import CourseCard from '../../components/CourseCard/CourseCard.jsx';
 import SearchBar from '../../components/SearchBar/SearchBar.jsx';
-import { useDispatch } from 'react-redux';
-import { selectCartCurrentProduct } from '../../store/reducers/cartState/cartstate.selector';
+import { useSelector, useDispatch } from 'react-redux';
 
+let NoResource = () => {
+    return(
+        <Lottie animationData={resourcenotfoundanimation} loop={true}>
+
+        </Lottie>
+    )
+}
 
 let BookClass = () => {
 
-    const [courses, setCourses] = useState([])
+    const dispatch = useDispatch();
+    const courses = useSelector(selectAllProducts);
     const [search, setSearch] = useState('');
     const [filteredCourses, setFilteredCourses] = useState(courses);
+
 
 
     useEffect(() => {
@@ -26,7 +37,7 @@ let BookClass = () => {
                     if (coursea.startPrice < courseb.startPrice) return -1
                     else { return 1 }
                 }))
-                setCourses(res)
+                dispatch(setAllProducts(res))
             })
 
         })
@@ -111,10 +122,10 @@ let BookClass = () => {
                 </div>
             </div>
             <div className='bookbytitlecontainer'>
-                {(filteredCourses.length === 0) && <h3 style={{ fontSize: 'x-large' }}>No results found</h3>}
+                {(filteredCourses.length === 0) && <NoResource/>}
                 {filteredCourses.map((course, index) => {
                     return (<CourseCard onhovertext={'Book Class'} course={course} imgname={course.imgName}
-                                         goto={`/bookclass/checkoutproduct`}  key={index} />)
+                                         goto={`/bookclass/addproduct`}  key={index} />)
                 })}
             </div>
         </div>
