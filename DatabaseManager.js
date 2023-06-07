@@ -66,7 +66,6 @@ class DataBaseManager {
 
     static async getProduct(id){
         let res = await DataBaseManager.courseModel.findById(id)
-        console.log('hey product from db',res)
         return res
     }
 

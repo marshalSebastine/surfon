@@ -88,7 +88,6 @@ async function  findTotalCost(purchase){
   let totalCost = 0
   for(let product of purchase){
     let productfromdb = await DataBaseManager.getProduct(product._id)
-    console.log(productfromdb,'start price');
     let price = (productfromdb.endPrice && isDayWeekend(product.dateSelected)) ? productfromdb.endPrice : productfromdb.startPrice;
     totalCost += product.quantity * price
   }

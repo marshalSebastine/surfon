@@ -66,7 +66,8 @@ const Checkout = () => {
             return;
         }
         // creating a new order
-        const result = await fetch("http://localhost:3000/orders",
+        const courseFetchUri = process.env.NODE_ENV === 'development' ? `http://localhost:4001/orders` : 'https://surfon.onrender.com/orders'
+        const result = await fetch(courseFetchUri,
          { method: 'POST',
            headers: {
               'Content-Type': 'application/json'
