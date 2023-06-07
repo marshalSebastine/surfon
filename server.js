@@ -56,13 +56,15 @@ app.post('/orders', async (req, res) => {
       key_secret: process.env.RAZORPAY_SECRET,
     });
     let cost = await findTotalCost(req.body.productsPurchasing)
+    console.log('continuing on orders post req')
     const options = {
       amount: cost, // amount in smallest currency unit
       currency: "INR",
       receipt: "receipt_order_74394",
     };
-
+    console.log('before creating order');
     const order = await instance.orders.create(options);
+    console.log('after creating order');
     res.setHeader('Access-Control-Allow-Origin', origin)
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
