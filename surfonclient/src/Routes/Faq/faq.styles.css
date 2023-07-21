@@ -1,0 +1,31 @@
+.faqpagetitlecontainer{
+    text-align: center;
+    width: 100%;
+    margin: unset;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+.faqpageparent{
+    background-image: linear-gradient(to bottom, #9acef7, #bdd8fa, #d9e3fc, #eff0fd, #ffffff);
+}
+.faqpagetitle{
+    font-family: 'WorkSans';
+    font-size: 60px;
+    color: white;
+    margin: 40px;
+    font-weight: 400;
+}
+.faqpagequestionscontainer{
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}

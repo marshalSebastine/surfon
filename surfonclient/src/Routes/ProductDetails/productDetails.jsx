@@ -150,7 +150,12 @@ const ProductDetails = () => {
         }
     }, [dateValidity])
 
-
+    useEffect(() => {
+        if(window){
+            console.log('document is available');
+            window.scroll(0,0)
+        }
+    },[])
     useEffect(() => {
         totalCoursePrice = getTotalCoursePrice()
     }, [courseQuantity, isWeekend])

@@ -55,7 +55,8 @@ Includes: First Introductory session 2.5 hours + Seven 1.5 hr. sessions`},
 popularity: 6,imgName: 'booksupocean5'},  
 {title: 'SUP PRO: 10 days Course',startPrice: 17000,popularity: 4,
  imgName: 'booksupocean10',multipleday: true},  
-{title: 'Discover Surf Standard',startPrice: 1500,endPrice:1800,popularity: 9, imgName: 'bookdiscsurfstandard',
+{title: 'Discover Surf Standard',startPrice: 1500,endPrice:1800,
+popularity: 9, imgName: 'bookdiscsurfstandard',category: 'surfing',level: 1,
 expertiselevel: `Beginner Tryout Session`,intro: `Experience for the first time the world 
 of safe ocean sport and learning Surfing. A fun-filled session that introduces you to the water sports.
 `,descbody: `Surfing beginner lesson
@@ -63,7 +64,8 @@ of safe ocean sport and learning Surfing. A fun-filled session that introduces y
 1:3 Instructor Ratio. Basic pool swimming skill recommended`, desctitle: `The Fee indicated is per person.`,
 learn: ['Introduction to Surfing and ocean.','Surfing white water waves','How to read the ocean and weather.',
 'Understanding waves and rips.','Ocean Safety.']},  
-{title: 'Discover Surf – 101 Private Session',startPrice: 2000,endPrice:2500,popularity: 9,
+{title: 'Discover Surf – 101 Private Session',startPrice: 2000,
+endPrice:2500,popularity: 9,category: 'surfing', level: 1,
  imgName: 'bookdiscsurfprivate',expertiselevel: 'Private :  Beginner Tryout Session',intro: `Experience for the first time the world of
   safe ocean sport and learning Surfing.A fun-filled session that introduces you to the water sports.`,
 descbody: `Surfing beginner lesson
@@ -72,7 +74,9 @@ descbody: `Surfing beginner lesson
 This is where beginners discover the joy of surfing. Perfect for newbies, novice swimmers who love the ocean.
 Includes basic ocean safety training, ocean swimming surfing in a One on One format. Get ready to taste the ocean!`,desctitle:'NON SWIMMERS WELCOME'
 ,learn: ['Introduction to Surfing and ocean.','Surfing white water waves','How to read the ocean and weather.','Understanding waves and rips','Ocean Safety.']},  
-{title: 'Discover Surf EXPERIENCE 2.5 hrs',startPrice: 3000, endPrice:3500,popularity: 6, 
+{title: 'Discover Surf EXPERIENCE 2.5 hrs',startPrice: 3000,
+intro: 'Private One on One Beginner tryout session. Ideal for Kids- 6 years to 16 years and adults who are non swimmers or who need exclusive attention.',
+ endPrice:3500,popularity: 6,category: 'surfing', level: 1,
  imgName: 'bookdssurfexp',expertiselevel: '2.5 hours of Awesomeness- For beginners',
 learn: ['Advanced Introduction to Surfing and ocean.',
                            'Advanced Ocean literacy & safety','Free float: Ocean flotation',
@@ -84,7 +88,8 @@ learn: ['Advanced Introduction to Surfing and ocean.',
                             Perfect for newbies, novice swimmers who love the ocean.
                             Includes basic ocean safety training, ocean swimming surfing in a One on One format.
                              Brand new package from the ocean experts at  experience`}, 
-{title: 'First Wave Foundation Course',startPrice: 18000, endPrice:24000,popularity: 3,
+{title: 'First Wave Foundation Course',startPrice: 18000,
+ endPrice:24000,popularity: 3,category: 'surfing', level: 2,
  imgName: 'bookfirstwave',intro: `First Wave Foundation Course is the proper 
  beginner Course which combines ocean safety and surf lessons.
  15 sessions 1.5 hours a day. Not Necessarily continuous `,desctitle: 'Bay of Life’s First Wave Foundation Course:',
@@ -104,7 +109,7 @@ learn: ['Advanced Introduction to Surfing and ocean.',
 ocean safety, understanding of waves. Get ready for your first wave!`],multipleday: true
 },
 {title: 'Next Wave Advanced Beginner Course',startPrice: 9600,
- endPrice:12500,popularity: 3, imgName: 'booknextwavwadvncd',
+ endPrice:12500,popularity: 3, imgName: 'booknextwavwadvncd',category: 'surfing', level: 2,
   intro: `Now you are committed to the sport of surfing and want to take your learning to the next level.
  NEXT WAVE ADVANCED BEGINNER is a 8 days a month,
  8 months course.`,desctitle: `Now you are committed to the sport of surfing and want to take your learning to the next level.
@@ -129,7 +134,8 @@ Afternoon Batch:
 2:30 – 4:00
 4:00 – 5:30`,multipleday: true
 }, 
-{title: 'Cut back Intermediate Course',startPrice: 8000, endPrice:12000,
+{title: 'Cut back Intermediate Course',startPrice: 8000,
+ endPrice:12000,category: 'surfing', level: 2,
 popularity: 6, imgName: 'bookcutbackcrse', intro: `This is where it gets really interesting. This is when you are learning and doing your cut backs and bottom turns, taking off sideways and riding the face of the wave. In short the true surfing euphoria starts here. This course has all the quiver of boards and instructor to help you nail those moves and prepare yourself to the next level.
 
 AFTER COMPLETING NWA

@@ -16,81 +16,60 @@ export const SideMenuData = [
       cName: "nav-text"
     },
     {
-      title: "Surfing",
-      path: "/surfing",
+      title: "Ocean Sports",
+      path: "/ocean",
       icon: <MdIcons.MdSurfing style={{transform: 'rotate(45deg)'}}/>,
       cName: "nav-text",
       subnav: [
         {title: "Surf School in Kovalam",
         icon: <GiIcons.GiSchoolBag/>,
-        path: "/a",
+        path: "/surfing",
         linkIndex: 1,
         cName: "subnav-text"},
         {title: "Ocean Swimming",
-        path: "/b",
+        path: "/oceanswimming",
         linkIndex: 2,
         icon: <TbIcons.TbSwimming/>,
         cName: "subnav-text"},
-        {title: "Scuba diving in chennai",
+        {title: "Kayaking in chennai",
         icon: <GiIcons.GiScubaMask/>,
         linkIndex: 3,
-        path: "/c",
+        path: "/kayaking",
         cName: "subnav-text"}
       ]
     },
     {
-      title: "Ocean Sports",
-      path: "/ocean",
-      linkIndex: 4,
-      icon: <MdIcons.MdOutlineSports />,
-      cName: "nav-text"
-    },
-    {
       title: "Edu & Camps",
       path: "/camps",
-      linkIndex: 5,
+      linkIndex: 4,
       icon: <GiIcons.GiCampingTent />,
       cName: "nav-text"
     },
     {
       title: "Book a Class",
       path: "/bookclass",
-      linkIndex: 6,
+      linkIndex: 5,
       icon: <MdIcons.MdClass/>,
-      cName: "nav-text"
-    },
-    {
-      title: "Team Outing Activities",
-      path: "/team-outing-activities",
-      linkIndex: 7,
-      icon: <RiIcons.RiGroup2Line />,
       cName: "nav-text"
     },
     {
       title: "FAQ",
       path: "/faq",
-      linkIndex: 8,
+      linkIndex: 6,
       icon: <FaIcons.FaQuestion />,
-      cName: "nav-text"
-    },
-    {
-      title: "Team Outing Activities",
-      path: "/team-outing-activities",
-      linkIndex: 9,
-      icon: <RiIcons.RiGroup2Line />,
       cName: "nav-text"
     },
     {
       title: "About",
       path: "/about",
-      linkIndex: 10,
+      linkIndex: 7,
       icon: <AiIcons.AiOutlineInfoCircle />,
       cName: "nav-text"
     },
     {
       title: "Contact Us",
       path: "/contact",
-      linkIndex: 11,
+      linkIndex: 8,
       icon: <FiIcons.FiPhoneCall />,
       cName: "nav-text"
     }

@@ -56,7 +56,6 @@ app.post('/orders', async (req, res) => {
       key_secret: process.env.RAZORPAY_SECRET,
     });
     let cost = await findTotalCost(req.body.productsPurchasing)
-    console.log('continuing on orders post req')
     const options = {
       amount: cost, // amount in smallest currency unit
       currency: "INR",

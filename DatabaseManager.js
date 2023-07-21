@@ -43,6 +43,8 @@ class DataBaseManager {
             descbody: String,
             included: [String],
             expertiselevel: String,
+            category: String,
+            level: Number,
             multipleday: Boolean,
             relatedCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }]
         });

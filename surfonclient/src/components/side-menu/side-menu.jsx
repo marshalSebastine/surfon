@@ -38,7 +38,7 @@ const ExpandableNavItem = ({ item, setIndex, selectedIndex }) => {
                 to={item.path}
                 onClick={() => { setIndex(item.linkIndex) }}>
                 {item.icon}
-                <span style={{ padding: '0px 30px' }} >{item.title}</span>
+                <span style={{ padding: '0px 20px' }} >{item.title}</span>
               </Link>
             </li>
           )

@@ -1,0 +1,148 @@
+@keyframes textgoup {
+    0%{
+        transform: translateY(14px);
+        opacity: 0;
+    }
+    10%,100%{
+        transform: translateY(-14px);
+        opacity: 1;
+    }
+}
+
+.oceanswimtitlecontainer{
+    min-height: 90%;
+    padding: 30px;
+}
+.oceanswimprewrap{
+    background-image: url("../../assets/blurry-gradient-haikei.svg");
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+.oceanswimmingbg{
+    background-image: url('../../assets/friends-running-water.jpg');
+    width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    height: 100vh;
+}
+
+.oceanswimmingtitle{
+    font-size: clamp(40px,90px,140px);
+    color: white;
+    font-family: 'WorkSans';
+    opacity: 1;
+    z-index: 1;
+}
+.filtercover{
+    background-image: linear-gradient(to right top, #3637397c, #404d6276, #42668d79, #3b7fbb7b, #129ceb76);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.register{
+    text-decoration: none;
+    display: block;
+    width: 300px;
+    margin-left: auto;
+}
+.register h3{
+    color: cornsilk;
+    font-size: 60px;
+    font-family: 'WorkSans';
+    font-weight: 800;
+    text-align: right;
+    transition: color 0.6s ease-in;
+}
+.register h3:hover,.register h3:focus{
+    color: chartreuse;
+}
+.oceanswimwrapper{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+.oceanswimgflexchild{
+    flex: 1;
+    min-height: 450px;
+    text-align: center;
+}
+.oceanswimgflexchildtitle span, .oceanswimgflexchildcontent span{
+    font-family: WorkSans;
+    color: ghostwhite;
+    position: relative;
+    padding-right: 7px;
+    display: inline-block;
+    animation: 8s infinite alternate textgoup;
+    opacity: 0;
+}
+.oceanswimgflexchildtitle{
+    font-weight: 700;
+    font-size: 30px;
+    position: relative;
+}
+
+.oceanswimgflexchildcontent span{
+    font-weight: 550;
+    font-size: 20px;
+}
+.oceanswimwhatulearntitle{
+    font-family: 'WorkSans';
+    font-size: clamp(35px,45px,55px);
+    color: powderblue;
+    margin: 0px 10px;
+}
+
+.learncardswrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    gap: 20px;
+}
+
+.oceanswimlearncard{
+    width: 300px;
+    border: whitesmoke 2px double;
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+}
+.oceanswimlearncard h3{
+    font-size: 20px;
+}
+.whatulearnparentwrapper{
+    
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .oceanswimwrapper.responsive{
+        display: block;
+    }
+    .oceanswimgflexchild.responsive{
+        min-height: 250px;
+    }
+
+}
+

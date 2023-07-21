@@ -14,6 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root {
+  --sepia: rgb(255, 255, 213);; /* Define the variable */
+}
 @font-face {
   font-family: "NothingYouCouldDo";
   src: local("NothingYouCouldDo"),
@@ -24,3 +27,13 @@ code {
   src: local("Heebo"),
    url("./fonts/Heebo/static/Heebo-Regular.ttf") format("truetype");
   }
+@font-face {
+  font-family: 'OpenSans';
+  src: local('OpenSans'), url('./fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf') format('truetype');
+  /* You can add additional font formats (e.g., woff, woff2) for better cross-browser compatibility */
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: local('WorkSans'), url('./fonts/Work_Sans/static/WorkSans-Regular.ttf') format('truetype');
+  /* You can add additional font formats (e.g., woff, woff2) for better cross-browser compatibility */
+}

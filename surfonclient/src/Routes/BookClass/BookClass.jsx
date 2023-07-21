@@ -23,26 +23,6 @@ let BookClass = () => {
     const [search, setSearch] = useState('');
     const [filteredCourses, setFilteredCourses] = useState(courses);
 
-
-
-    useEffect(() => {
-        const courseFetchUri = process.env.NODE_ENV === 'development' ? `http://localhost:4001/allcourses` : 'https://surfon.onrender.com/allcourses'
-        fetch(courseFetchUri).then((response) => {
-            if (response.status !== 200) {
-                console.error('courses fetching error', response.status)
-                return
-            }
-            response.json().then((res) => {
-                res.sort(((coursea, courseb) => {
-                    if (coursea.startPrice < courseb.startPrice) return -1
-                    else { return 1 }
-                }))
-                dispatch(setAllProducts(res))
-            })
-
-        })
-    }, [])
-
     useEffect(() => {
         if (search === '') {
             setFilteredCourses(courses)

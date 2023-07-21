@@ -1,0 +1,273 @@
+
+
+.surfpageintropic{
+    background-image: url("../../assets/surfasanemotion.jpg");
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    background-position: center 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+}
+.settexthidevisible{
+    opacity: 0;
+    z-index: 2;
+    color: white;
+    transition: all 0.6s ease-in-out;
+}
+.surfpageintropicheader{
+  font-size: clamp(large,xx-large,xxx-large);
+  font-style: italic;
+  font-weight: 400;
+  margin: 16px 0px;
+  font-family: "OpenSans";
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.surfpageintropiccontent{
+  font-size: clamp(10px,14px,18px);
+  max-width: 700px;
+  padding: 0;
+  margin: 0;
+  font-family: 'OpenSans';
+  font-weight: 450;
+  margin: 0 auto;
+}
+.surfpageintropiccontact{
+  padding: 8px 0px;
+  margin-top: 70px;
+  font-weight: clamp(300,300,500);
+  font-size: clamp(small,large,x-large);
+}
+.surfpageintropic:hover .settexthidevisible{
+    opacity: 1;
+}
+
+@media (pointer: coarse) and (max-width: 767px) {
+  .settexthidevisible{
+    opacity: 1;
+  }
+}
+
+.surfvaluecontainer{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #6CB4EE;
+  color: white;
+  font-family: 'WorkSans';
+  animation: make-wave-div 3s ease-in-out 0 infinite;
+}
+
+.whatuget{
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 20px;
+}
+.whatuget ul{
+  all: unset;
+}
+.whatuget h2{
+  font-size: clamp(24px,30px,38px);
+}
+.surfvaluecontainerlist li{
+  font-size: large;
+}
+.whatugetcontentwrapper{
+  width: 100%;
+  box-sizing: border-box;
+}
+.dotted-gradient {
+  background-image: linear-gradient(to right, #333 40%, rgba(255, 255, 255, 0) 20%);
+  height: 10px;
+  background-position: top;
+  background-size: 3px 1px;
+  background-repeat: repeat-x;
+}
+.surfvaluecontainerlistwrapper{
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.surfvaluecontainerlist{
+  width: 100%;
+}
+.surfvaluecontainerlist li{
+  text-align: left;
+  margin: 10px 10px;
+}
+.wavelayered{
+  aspect-ratio: 3/1;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.bluewave{
+  background-image: url('../../assets/layered-waves-haikei.svg');
+}
+.surfpagesecondheader{
+  text-align: center;
+  color: #6CB4EE;
+  font-size: clamp(18px,37px,52px);
+  font-family: 'WorkSans';
+  font-weight: 300;
+}
+.surfpagesecondcontent{
+  text-align: center;
+  font-family: 'WorkSans';
+  font-weight: 200;
+  box-sizing: border-box;
+  padding: 5px 7px;
+  font-size: medium;
+  margin-bottom: 90px;
+}
+.introclassescontainer{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  background-color: #9AC5F4;
+  text-align: center;
+}
+.introclasseswrapper{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.classdetailcard{
+  width: clamp(220px,320px,380px);
+  font-family: 'OpenSans';
+  z-index: 1.5;
+  background-image: url('../../assets/blurry-blue.svg');
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-position: center;
+  margin-bottom: 50px;
+  padding: 14px 42px;
+  border-radius: 10px 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #6CB4EE;
+}
+.classdetailcard h4 {
+  font-size: x-large;
+  font-weight: 500;
+}
+.classdetailcard p{
+  font-family: 'OpenSans';
+  font-size: medium;
+  font-weight: 400;
+}
+.introclassescontainer h3 {
+  font-size: clamp(17px,37px,42px);
+  font-family: 'WorkSans';
+  font-style: italic;
+  font-weight: 300;
+  color: white;
+}
+.surfatbayoflife{
+  background-color:#9AC5F4;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.surfatbayoflife h4,.surfatbayoflife h2{
+  font-family: 'WorkSans';
+  color: white;
+  margin: unset;
+  padding-top: 50px;
+  text-shadow: 3px 3px 12px #eae7f3,
+  -2px 1px 15px #9cc3e3;
+}
+.surfatbayoflife h2{
+  font-size: 35px;
+
+}
+.surfatbayoflife h4{
+  font-size: x-large;
+}
+.surffeaturecards{
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-around;
+  margin-top: 60px;
+  padding: 20px;
+  align-items: center;
+}
+.featurecard{
+  width: clamp(200px,300px,350px);
+  margin-top: 20px;
+  min-height: 300px;
+  background-image: linear-gradient(to right top, #b0daff, #b8e1ff, #c2e8ff, #cdefff, #daf5ff);
+  font-family: 'WorkSans';
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 22px;
+  padding: 30px;
+  color: gray;
+}
+.featurecardicon{
+  width: 90px;
+  height: 80px;
+  color:#6CB4EE;
+}
+.featurecard h3{
+  font-size: 24px;
+  font-weight: 400;
+}
+.featurecard p {
+  font-weight: 300;
+  font-size: medium;
+}
+.faqcontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+}
+.faqtitlecontainer{
+  width: 90%;
+}
+.faqtitle{
+  font-size: xx-large;
+  font-weight: 400;
+  text-align: left;
+  margin: unset;
+  font-family: 'WorkSans';
+}
+.line{
+  width: 100%;
+  height: 2px;
+  position: relative;
+  top: -20px;
+  background-color: #333;
+}
+@media only screen and (min-width: 750px) {
+  .surfvaluecontainer{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .surfvaluecontainer section:first-child{
+    align-self: flex-start;
+    margin-left: 15%;
+  }
+  .surfvaluecontainer section:last-child{
+    align-self: flex-end;
+  }
+  .whatuget{
+    width: 60%;
+  }
+  .surfvaluecontainerlist li{
+    margin-left: 10%;
+  }
+}
+
