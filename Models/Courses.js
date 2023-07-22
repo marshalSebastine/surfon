@@ -3,7 +3,7 @@ imgName: 'bookkayaking',expertiselevel: 'Beginner Tryout Session ',
 intro: `Experience for the first time the world of safe
  ocean sport and learning, Flat water kayaking.
   A fun-filled session that introduces you to the water sports.`,
-desctitle: 'Discover KayakingDuration: 1.5 hours.',
+desctitle: 'Discover KayakingDuration: 1.5 hours.',category: 'kayaking',
 descbody: 'Location: Bay of Life, Chennai', included: ['Kayak & Paddle','Life-vest','Instructor and Instructions','Shower & change room'],
 learn: ['Kayaking basics','Launching','Docking','Paddling','Ocean safety basics']},
 {title: 'Discover Standup paddling',startPrice: 1800,popularity: 5, imgName: 'bookstanduppaddling',
@@ -16,7 +16,8 @@ descbody: `Discover Standup Paddling
 Duration: 1.5 hours.
 Location: Bay of Life, Chennai`,learn: ['SUP basics','Launching','Balance','Paddling','Ocean safety basics'],
 included: ['SUP & Paddle','Life-vest','Instructor and Instructions','Shower & change room']},  
-{title: 'Kayaking Course 5 days',startPrice: 8500,popularity: 7, imgName: 'bookkayaking5',
+{title: 'Kayaking Course 5 days',startPrice: 8500,popularity: 7,
+ imgName: 'bookkayaking5',category: 'kayaking',
 expertiselevel: 'Beginner Kayak course',intro: `Flat Water & Ocean Level 1
 Kayaking 2.5 days in Flat Water and 2.5 days in Ocean`,multipleday: true,
 descbody:`Course: 5 Days

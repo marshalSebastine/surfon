@@ -3,7 +3,7 @@ import './FaqBox.styles.css';
 import * as MdIcons from "react-icons/md";
 
 
-const FaqBox = ({questiontext,answertext}) => {
+const FaqBox = ({questiontext,answertext,styletext}) => {
     const answer = useRef();
     const [open,setOpen] = useState(false);
 
@@ -11,11 +11,11 @@ const FaqBox = ({questiontext,answertext}) => {
         setOpen(!open);
     }
     return( 
-        <div onClick={expandQuestionBox} className='faqbox'>
-            <span className={ !open ? 'question' : 'question goup'}>{questiontext}</span>
-            <MdIcons.MdOutlineArrowDropDown className={open ? 'questionexpandicon' : 'questionexpandicon expanded'} />
+        <div  onClick={expandQuestionBox} className='faqbox'>
+            <span style={styletext} className={ !open ? 'question' : 'question goup'}>{questiontext}</span>
+            <MdIcons.MdOutlineArrowDropDown style={styletext} className={open ? 'questionexpandicon' : 'questionexpandicon expanded'} />
             <div ref={answer} style={open ? {height: `${answer.current.scrollHeight}px`}:{}} className='answerbox'>
-                <p className={!open ? 'answer' : 'answer appear'}>
+                <p style={styletext} className={!open ? 'answer' : 'answer appear'}>
                    {answertext}
                 </p>
             </div>

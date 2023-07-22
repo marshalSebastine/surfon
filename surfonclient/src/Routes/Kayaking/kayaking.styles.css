@@ -10,21 +10,20 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 20px;
-    width: min(85%,900px);
-
+    box-sizing: border-box;
+    padding: 50px;
+    width: 85%;
 }
 .kayakingcontentwrapper{
     width: 100%;
     padding: 100px 0px;
     box-sizing: border-box;
-    
 }
 
 
 .kayakingsummary,.kayakingsubtitle{
     width: 100%;
-    text-align: left;
+    text-align: center;
     margin-top: 30px;
 }
 
@@ -36,7 +35,7 @@
     margin: 0;
     padding: 0;
     font-size: clamp(24px, 40px, 45px);
-    color: white;
+    color: antiquewhite;
     text-shadow: 1px 1px 4px #eae7f3, 0px 1px 5px #9cc3e3;
     font-weight: 700;
 }
@@ -59,4 +58,129 @@
     display: inline-block;
     animation: 4s 1 forwards textgoup;
     opacity: 0;
+}
+.coursewrapperonkayakingpage,.kayakingpagecourse{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.coursewrapperonkayakingpage{
+    margin-top: 150px;
+    gap: 32px;
+}
+.kayakingpageinfowrapper{
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.kayakingpageinfowrapper h2 {
+    font-family: 'WorkSans';
+    font-size: xx-large;
+    color: aliceblue;
+}
+.kayakingpageinfowrapper p{
+    font-family: 'WorkSans';
+    font-size: large;
+    color: antiquewhite;
+    margin-bottom: 52px;
+}
+.kayakingpagecourse{
+    border: white double 2px;
+    border-radius: 10px;
+}
+.kayakingpagecoursehead{
+    background-color: lightslategrey;
+    color: antiquewhite;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 19.2px;
+}
+.kayakingpagecoursehead h2 {
+    margin-bottom: 18px;
+}
+.kayakingpagecourse{
+    width: min(80%,430px);
+}
+.kayakingpagecoursebody{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.coursepricetag{
+    color: antiquewhite;
+    line-height: 0.8;
+    font-size: 65px;
+    margin: 40px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.kayakingpagecoursefeaturebox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kayakingpagecoursefeaturestrip {
+    min-height: 60px;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+}
+.kayakingpagecoursefeaturestrip span{
+    font-size: 15px;
+    color: rgba(240, 255, 255, 0.786);
+}
+.linefromcourse{
+    font-size: large;
+    width: 80%;
+    opacity: 0.7;
+    margin: 10px;
+    text-align: center;
+}
+.kayakcoursecheck{
+    color: rgba(255, 255, 255, 0.784);
+    font-size: larger;
+    width: 35px;
+    padding:0px 4px;
+}
+.coursepricetag::before{
+    content: '\20B9';
+    font-size: 39px;
+}
+.perperson{
+    font-size: large;
+    color: white;
+    margin: 0;
+}
+.kayakingpagefaqwrapper{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 30px;
+    align-items: center;
+}
+@media only screen and (min-width: 1000px) {
+    .coursewrapperonkayakingpage{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .kayakingpagecourse{
+        width: min(45%,410px);
+    }
 }
