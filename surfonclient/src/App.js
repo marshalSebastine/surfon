@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import { setAllProducts } from "./store/reducers/cartState/cartstate.reducer";
 import { useDispatch } from "react-redux";
 import ContactPage from "./Routes/Contact/Contact";
+import AboutPage from "./Routes/AboutPage/AboutPage";
 function App() {
   // const isDeskTop = useSelector(selectIsDesktop)
 
@@ -52,6 +53,7 @@ function App() {
               <Route path="/oceanswimming" element={<OceanSwimming/>}/>
               <Route path="/kayaking" element={<Kayaking/>}/>
               <Route path="/contact" element={<ContactPage/>}/>
+              <Route path="/about" element={<AboutPage/>}/>
           </Route>
       </Routes>
     </>
