@@ -1,0 +1,52 @@
+.contactpagewrappper{
+    width: 100%;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: honeydew;
+}
+
+.contactcardwrapper{
+    position: relative;
+    padding-top: 70px;
+    left: 10%;
+    max-width: 670px;
+    box-sizing: border-box;
+    background-color: darkseagreen;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin-bottom: 50px;
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px;
+}
+.contactaddresscontainer{
+    display: flex;
+}
+.contactcardwrapper h1{
+    font-size: 75px;
+    font-weight: 50;
+    color: rgb(245, 234, 220);
+    font-family: "OpenSans";
+}
+.contactcardwrapper > p {
+    font-size: x-large;
+    font-style: italic;
+    padding-left: 12px;
+}
+.contactaddresscontainer h3 {
+    font-size: 21px;
+    font-weight: 400;
+}
+.contactcardwrapper h3,.contactcardwrapper p {
+    color: rgb(244, 233, 219);
+}
+@media only screen and (max-width: 800px) {
+    .contactcardwrapper{
+        position: static;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .contactaddresscontainer{
+        flex-wrap: wrap;
+        gap: 43px;
+    }
+}
