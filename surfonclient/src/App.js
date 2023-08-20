@@ -14,6 +14,7 @@ import Faq from "./Routes/Faq/Faq";
 import { useEffect } from "react";
 import { setAllProducts } from "./store/reducers/cartState/cartstate.reducer";
 import { useDispatch } from "react-redux";
+import CampsPage from "./Routes/Campspage/Campspage";
 import ContactPage from "./Routes/Contact/Contact";
 import AboutPage from "./Routes/AboutPage/AboutPage";
 function App() {
@@ -54,6 +55,7 @@ function App() {
               <Route path="/kayaking" element={<Kayaking/>}/>
               <Route path="/contact" element={<ContactPage/>}/>
               <Route path="/about" element={<AboutPage/>}/>
+              <Route path="/camps" element={<CampsPage/>}/>
           </Route>
       </Routes>
     </>

@@ -16,10 +16,10 @@ const AboutPage = () => {
             <section className='wayoflifemovingpointswrapper'>
                 <h1>
                     <span>Way of Ocean </span>
-                    <div class="movingpoints">
-                        <div class="word1">Social</div>
-                        <div class="word2">Substainable</div>
-                        <div class="word3">Impactful</div>
+                    <div className="movingpoints">
+                        <div className="word1">Social</div>
+                        <div className="word2">Substainable</div>
+                        <div className="word3">Impactful</div>
                     </div>
                 </h1>
             </section>
