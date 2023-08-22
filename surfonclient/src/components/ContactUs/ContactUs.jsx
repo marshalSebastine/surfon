@@ -5,7 +5,7 @@ import './contactUs.css';
 const ContactUs = () => {
     return(
         <div className='constactuscontainer'>
-            <div className='contactusform'>
+            <form  autoComplete={true} className='contactusform'>
                 <h2>Speak to us</h2>
                 <p>Call us : 99404 16396 / 9940488880</p>
                 <p>Email: Contact@bayoflife.com</p>
@@ -18,7 +18,7 @@ const ContactUs = () => {
                 <TextField name={'email'} id={'email'}
                            type={'email'} label={'Email*'} required={true} />
                 <MaterialButton buttonStyle={{marginTop: '60px'}} buttoncontent={'Submit'}/>
-            </div>
+            </form>
             {/* <div className='contactusmap'>
             </div> */}
         </div>

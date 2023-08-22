@@ -6,7 +6,9 @@ const MaterialButton = ({ buttoncontent, buttonAction, buttonStyle, disabled }) 
         <button disabled={disabled} style={buttonStyle}
             onClick={(event) => {
                 CreateRipple(event)
-                buttonAction(event)
+                if(buttonAction){
+                    buttonAction(event)
+                }
             }}
             className={disabled ?'ripple-button disabled-button' : 'ripple-button'}>
             <p>{buttoncontent}</p>

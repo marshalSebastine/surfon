@@ -43,7 +43,6 @@ const ReviewCard = ({name,date,rating,desc}) => {
             setTextAction('hide')
         }else{
             descRef.current.style.height = '75px'
-            cardRef.current.style.height = '290px'
             ref.current.style.WebkitBoxOrient = 'vertical'
             ref.current.style.display = '-webkit-box'
             ref.current.style.WebkitLineClamp = '3'

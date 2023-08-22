@@ -71,7 +71,6 @@ const ProductDetails = () => {
     let [isWeekend, setIsWeekend] = useState(null);
     let [mindate, maxdate] = getMinandMax()
     const disabled = product.multipleday ? false : !dateValidity
-    console.log(disabled)
     const getTotalCoursePrice = () => {
 
         if(product.multipleday) return product.startPrice * courseQuantity
@@ -152,7 +151,6 @@ const ProductDetails = () => {
 
     useEffect(() => {
         if(window){
-            console.log('document is available');
             window.scroll(0,0)
         }
     },[])
