@@ -74,7 +74,7 @@ const Surfing = () => {
                 <div className='introclasseswrapper'>
                     {introlessons.map((course, indx) => {
                         return (
-                            <div className='classdetailcard'>
+                            <div key={indx} className='classdetailcard'>
                                 <h4>{course.title}</h4>
                                 <p>{course.intro}</p>
                                 <Link onClick={(_evnt) => { dispatch(setCurrentProduct(course)) }}
@@ -91,7 +91,7 @@ const Surfing = () => {
                 <div className='introclasseswrapper'>
                     {advlessons.map((course, indx) => {
                         return (
-                            <div key={indx} className='classdetailcard'>
+                            <div  key={indx} className='classdetailcard'>
                                 <h4>{course.title}</h4>
                                 <p>{course.intro}</p>
                                 <Link onClick={(_evnt) => { dispatch(setCurrentProduct(course)) }}

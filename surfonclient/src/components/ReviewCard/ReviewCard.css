@@ -8,6 +8,7 @@
     /* margin-left: 300px; */
     margin-bottom: 20px;
     border: 2px solid #e5e5e5;
+    transition: height 2s linear;
 }
 .card-header{
     display: flex;
@@ -61,7 +62,7 @@
     font-style: normal;
     margin: 0px;
     padding-right: 0;
-    transition: height .5s;
+    transition: height 2s;
     overflow: hidden;
 
 }

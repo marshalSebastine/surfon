@@ -1,30 +1,28 @@
 import './side-menu.styles.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { SideMenuData } from '../../Model/side-menu-data';
 import * as MdIcons from "react-icons/md";
 import { useRef, useState } from 'react';
 import { CreateRipple } from '../../utils/styleutils';
 
 
-const NavItem = ({ item, selectedIndex, setIndex }) => {
+
+
+const NavItem = ({ item }) => {
   const navitem = useRef()
   return (
-    <Link ref={navitem} className={`nav-title ${item.linkIndex === selectedIndex ? 'selectednav' : ''}`}
-      onClick={(event) => {
-        setIndex(item.linkIndex)
-        CreateRipple(event)
-      }}
+    <NavLink ref={navitem} className={({ isActive, isPending }) => isPending ? 'nav-title' : isActive ? 'selectednav nav-title' : 'nav-title'}
+      onClick={(event) => { CreateRipple(event) }}
       to={item.path}>
       {item.icon}
       <span style={{ padding: '0px 30px' }}>{item.title}</span>
-    </Link>
+    </NavLink>
   )
 }
-const ExpandableNavItem = ({ item, setIndex, selectedIndex }) => {
+const ExpandableNavItem = ({ item }) => {
   const [draw, setDraw] = useState(false);
   return (
     <div className={`${draw ? 'expandednavitem' : ''}`} onClick={() => { setDraw(!draw) }}>
-
       <button onClick={CreateRipple} className='nav-title'>
         {item.icon}
         <span style={{ padding: '0px 30px' }}>{item.title}</span>
@@ -34,12 +32,17 @@ const ExpandableNavItem = ({ item, setIndex, selectedIndex }) => {
         {item.subnav.map((item, index) => {
           return (
             <li key={index} className={item.cName}>
-              <Link className={`subnav-title ${item.linkIndex === selectedIndex ? 'selectednav' : ''}`}
-                to={item.path}
-                onClick={() => { setIndex(item.linkIndex) }}>
+              <NavLink
+                onClick={(evnt) => {
+                  setDraw(true)
+                  CreateRipple(evnt)
+                  evnt.stopPropagation()
+                }}
+                className={({ isActive, isPending }) => isPending ? 'subnav-title' : isActive ? "subnav-title selectednav" : "subnav-title"}
+                to={item.path}>
                 {item.icon}
                 <span style={{ padding: '0px 20px' }} >{item.title}</span>
-              </Link>
+              </NavLink>
             </li>
           )
         })}
@@ -48,25 +51,20 @@ const ExpandableNavItem = ({ item, setIndex, selectedIndex }) => {
   )
 }
 
-const SideMenu = ({ menuOpen,setMenuOpen }) => {
-  const [selecteNavItemIndex, setNavIndex] = useState(0)
+const SideMenu = ({ menuOpen, setMenuOpen }) => {
   const handlebackDropClick = (evnt) => {
     setMenuOpen(false)
-  } 
+  }
   return (
     <>
-      <div onClick={handlebackDropClick} className={menuOpen ? 'sidemenubackdrop active' : 'sidemenubackdrop'}/>
+      <div onClick={handlebackDropClick} className={menuOpen ? 'sidemenubackdrop active' : 'sidemenubackdrop'} />
       <nav className={menuOpen ? 'side-menu active' : 'side-menu'}>
         <ul className='nav-menu-items'>
           {SideMenuData.map((item, index) => {
             return (
               <li key={index}
                 className={item.cName}>
-                {item.subnav ? <ExpandableNavItem setIndex={setNavIndex}
-                  selectedIndex={selecteNavItemIndex}
-                  item={item} /> : <NavItem setIndex={setNavIndex}
-                    selectedIndex={selecteNavItemIndex}
-                    item={item} />}
+                {item.subnav ? <ExpandableNavItem item={item} /> : <NavItem item={item} />}
               </li>
             );
           })}
