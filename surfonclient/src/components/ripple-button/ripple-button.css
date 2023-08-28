@@ -35,3 +35,20 @@
     margin: 0px;
     font-size: clamp(14px,16px,24px);
 }
+.buttoncontentwrapper{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 7px;
+}
+.loadingicon{
+    animation: spinningloader 2s ease-in-out infinite;
+}
+
+
+@keyframes spinningloader {
+    100%{
+        rotate: 360deg;
+    }
+}

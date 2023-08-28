@@ -40,13 +40,36 @@ app.get('/maps/api/', (req, res) => {
 });
 const origin = (process.env.NODE_ENV === 'development') ? 'http://localhost:3000' : 'https://surfonpeople.onrender.com'
 
-app.get('/allcourses', (_, res) => {
+app.get('/allcourses/', (_, res) => {
   DataBaseManager.getAllCourses().then((courses) => {
     res.setHeader('Access-Control-Allow-Origin', origin)
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     res.send(courses)
   })
+})
+
+app.post('/userdata/submit', async(req,res) => {
+  
+  const name = req.body.name;
+  const email = req.body.email;
+  console.log(req.body);
+  console.log(name,email)
+  // Check if the expected values are missing
+  if (!email) {
+      return res.status(400).json({ error: 'Name and email are required fields.' });
+  }
+
+  // In a real application, you would likely store the data in a database or perform other operations here
+
+  const response = {
+      message: `Received user data: Name - ${name}, Email - ${email}`
+  };
+  res.setHeader('Access-Control-Allow-Origin', origin)
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.json(response);
+
 })
 
 app.post('/orders', async (req, res) => {
